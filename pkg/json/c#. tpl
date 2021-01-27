@@ -1,0 +1,7 @@
+{{range $}}
+public class {{.Name}}
+{ {{range .Param}}
+	public {{.Name}} {{if .List}}List<{{.Property}}>{{else}}{{.Property}}{{end}} {get;set;} 	
+	{{end}}
+}
+{{end}}
